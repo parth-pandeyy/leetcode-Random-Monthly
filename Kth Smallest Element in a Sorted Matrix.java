@@ -1,3 +1,6 @@
+// https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/discuss/85173/Share-my-thoughts-and-Clean-Java-Code
+// https://www.youtube.com/watch?v=LkrsdWa69_Q
+
 public class Solution {
     public int kthSmallest(int[][] matrix, int k) {
         int lo = matrix[0][0], hi = matrix[matrix.length - 1][matrix[0].length - 1] + 1;//[lo, hi)
