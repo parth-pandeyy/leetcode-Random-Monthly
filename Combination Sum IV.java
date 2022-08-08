@@ -44,3 +44,22 @@ class Solution {
                 return dp[target] ;
        }
 }
+
+
+//Bottom-up approach or Tabulation approach
+class Solution {
+public int combinationSum4(int[] nums, int target) {
+  int[] combination = new int[target+1];
+    combination[0]=1;
+    // traversing from target 1 to combination
+    for(int i =1 ; i<combination.length ; i++){  // this you have to fill in dp array 
+       // traversing on num vector
+        for(int j = 0 ; j<nums.length ; j++){
+           if(i-nums[j]>=0){ // if don't use for loop then it will give invalid index
+            combination[i]+=combination[i-nums[j]]; // i here pointing as an target
+          }
+        }
+    }
+    return combination[target] ;
+  }
+}
