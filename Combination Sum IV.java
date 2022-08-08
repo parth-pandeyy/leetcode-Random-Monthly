@@ -2,8 +2,25 @@
 // Approach -> https://leetcode.com/problems/combination-sum-iv/discuss/85036/1ms-Java-DP-Solution-with-Detailed-Explanation
 //             https://www.youtube.com/watch?v=Wct0mN2SCRQ&t=628s
 
-// Top-Down approach or Memoization approach 
+// recursive solution
+class Solution {
+public int combinationSum4(int[] nums, int target) {
+    if (target == 0) {
+        return 1;
+    }
+    int res = 0;
+    for (int i = 0; i < nums.length; i++) {
+        if (target >= nums[i]) {
+            res += combinationSum4(nums, target - nums[i]);
+        }
+    }
+    return res;
+  }
+}
+// Time Limit Exceeded will occur because overlapping swap problem ho rahi hai or usmae time constraint satisfy nhi karega , toh DP ka scope hai
 
+
+// Top-Down approach or Memoization approach 
 class Solution {
     private int[] dp ;
     public int combinationSum4(int[] nums, int target) {
