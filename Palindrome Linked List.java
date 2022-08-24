@@ -10,7 +10,6 @@ class Solution {
        } 
     slow=reverse(slow);
     fast=head;
- 
 // compare both halves
     while(slow!=null){
         if(fast.val!=slow.val){
@@ -21,7 +20,6 @@ class Solution {
     }
        return true ; 
  } 
- 
 // this code is used to reverse the LinkedList  
     public ListNode reverse(ListNode head){
         ListNode prev = null ;
