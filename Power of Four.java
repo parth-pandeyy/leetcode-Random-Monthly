@@ -1,4 +1,5 @@
 // https://leetcode.com/problems/power-of-four/
+// approach-> https://www.youtube.com/watch?v=ZvLg05hEMd0&t=68s
 
 class Solution {
     public boolean isPowerOfFour(int n) {
