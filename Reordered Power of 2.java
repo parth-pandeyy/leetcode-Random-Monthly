@@ -1,4 +1,6 @@
 // https://leetcode.com/problems/reordered-power-of-2/submissions/
+// Approach -> https://leetcode.com/problems/reordered-power-of-2/solution/
+               https://www.youtube.com/watch?v=DmCvFhD5H5I
 
 class Solution {
     public boolean reorderedPowerOf2(int n) {
