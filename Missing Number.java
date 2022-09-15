@@ -14,7 +14,7 @@ class Solution {
            }
        }
         for(int index=0 ; index<nums.length ; index++){   
-            if(nums[index]!=index){ // agar element aur uska index equal nhi hai toh smhj lo index milgya                                            missing wala
+            if(nums[index]!=index){ // agar element aur uska index equal nhi hai toh smhj lo index milgya missing wala
                 return index ;
             }
         }
