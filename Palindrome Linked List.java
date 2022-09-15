@@ -1,4 +1,5 @@
 // https://leetcode.com/problems/palindrome-linked-list/
+// https://www.youtube.com/watch?v=70tx7KcMROc&t=7488s
 
 class Solution {
     public boolean isPalindrome(ListNode head) {
