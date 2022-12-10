@@ -29,7 +29,7 @@ class Solution {
     }
 }
 
-
+// youtube reference -> https://www.youtube.com/watch?v=IwRTStOZRxM
 // for Example : (minpartSize)n=10/3=>3.something means you can take 4
 //               (extrasize)r=10%3=>3.something means you can take 4
 // first loop consider how many parts will become
