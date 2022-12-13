@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/climbing-stairs/discuss/25299/Basically-it's-a-fibonacci.
+// https://www.youtube.com/watch?v=mLfjzJsN8us
 class Solution {
     public int climbStairs(int n) {
        // if(n<=0) return 0;
