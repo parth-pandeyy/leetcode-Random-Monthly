@@ -1,3 +1,6 @@
+// https://www.youtube.com/watch?v=gmEsErNo84g&t=300s
+// https://leetcode.com/problems/sum-of-distances-in-tree/discuss/130583/C%2B%2BJavaPython-Pre-order-and-Post-order-DFS-O(N)
+
 class Solution {
     int[] res , count;
     ArrayList<HashSet<Integer>> tree;
