@@ -5,7 +5,7 @@ class Solution {
         int ans =0 ;
         while(ans<n && costs[ans]<=coins){
             coins-=costs[ans];
-            ans+=1;
+            ans++;
         }
         return ans;
     }
