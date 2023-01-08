@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/gas-station/discuss/1706142/JavaC%2B%2BPython-An-explanation-that-ever-EXISTS-till-now!!!!
 class Solution {
     public int canCompleteCircuit(int[] gas, int[] cost) {
         int n = gas.length; 
