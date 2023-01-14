@@ -15,12 +15,14 @@ class Solution {
         if(v) return 0;
         visited.put(node,true);
         
-        int childTime=0;
+        int childTime=0;  //time for traversing all children. 
         for(int n : graph.getOrDefault(node , new ArrayList<>())){
-            childTime += dfs(graph , n , hasApple , 2 , visited);
+            childTime += dfs(graph , n , hasApple , 2 , visited);  // check recursively for all apples in subtrees.
         }
         
         if(childTime==0 && hasApple.get(node)==false){
+            // If no child has apples, then we won't traverse the subtree, so cost will be zero.
+           // similarly, if current node also does not have the apple, we won't traverse this branch at all, so cost will be zero.
             return 0;
         }
         return intialTime+childTime;
