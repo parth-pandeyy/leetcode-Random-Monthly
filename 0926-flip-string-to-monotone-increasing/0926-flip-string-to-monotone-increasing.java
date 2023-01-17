@@ -5,6 +5,10 @@ class Solution {
         int n = s.length();
         for(int i=0 ; i<n ; i++){
             char c = s.charAt(i);
+            // if c is 1, then it will not inpact the minFlips
+           // if c is 0, then 2 options we can do to make it mono incr
+               // 1. keep it as 0, and flip all the preceeding 1 to 0, need to know the count of ones so far
+               // 2. flip it to 1, will not need to do anything
             if(c =='1'){
                 countOnes++;
             }
