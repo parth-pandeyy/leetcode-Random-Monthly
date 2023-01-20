@@ -34,3 +34,12 @@ class Solution {
 // This is important because the output list is used again in the next recursion and we want to keep its original state. By creating a new copy of the list, we are able to maintain the original output list and continue the recursion with the new element added to the copy of the list.
 
 // This process is also known as deep copy and it allows to keep the original value as it is and work on the new copy and make any changes without affecting the original value.
+
+
+//                                         or
+
+// Sure, In simple terms, when the recursive function is called, we want to add new element to the list and keep track of the list with new element and also keep the original state of the list for next recursion.
+
+// The original list is output and the copy of the original list with new element is newOutput. We pass newOutput to the recursive function instead of output, so that the original list output remains unchanged and can be used in the next recursion.
+
+// By using this technique, the program is able to keep track of the list with new element and also maintain the original state of the list for next recursion.
