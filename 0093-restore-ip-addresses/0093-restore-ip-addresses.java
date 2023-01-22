@@ -17,7 +17,8 @@ class Solution {
                         
                        if(A<=255 && B<=255 && C<=255 && D<=255){
                           ans = A+"."+B+"."+C+"."+D;
-// The +3 is being added because the 'ans' string is composed of 4 integers separated by '.' which takes up 3 characters. If the length of 'ans' is equal to the length of 's' plus 3, it means that the resulting IP address is valid and therefore it is added to the 'ret' list which is a list of all valid IP addresses. 
+// The +3 is being added because the 'ans' string is composed of 4 integers separated by '.' which takes up 3 characters.
+// If the length of 'ans' is equal to the length of 's' plus 3, it means that the resulting IP address is valid and therefore it is added to the 'ret' list which is a list of all valid IP addresses. 
                           if(ans.length()==len+3){
                               list.add(ans);
                           } 
