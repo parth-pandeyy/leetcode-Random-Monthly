@@ -1,3 +1,7 @@
+// Striver-> https://www.youtube.com/watch?v=WBgsABoClE0
+// Aditya verma-> https://www.youtube.com/watch?v=szKVpQtBHh8
+// pepcoding-> https://www.youtube.com/watch?v=wvaYrOp94k0
+
 class Solution {
     public List<List<String>> partition(String s) {
         List<List<String>> ans = new ArrayList<>();
