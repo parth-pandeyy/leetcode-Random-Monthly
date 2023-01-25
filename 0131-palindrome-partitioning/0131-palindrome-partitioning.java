@@ -1,37 +1,30 @@
 class Solution {
-   public List<List<String>> partition(String s) {
-        // Backtracking
-        // Edge case
-        if(s == null || s.length() == 0) return new ArrayList<>();
-        
-        List<List<String>> result = new ArrayList<>();
-        helper(s, new ArrayList<>(), result);
-        return result;
+    public List<List<String>> partition(String s) {
+        List<List<String>> ans = new ArrayList<>();
+        backtrack(ans,new ArrayList<>(),s,0); // Backtracking
+        return ans;
     }
-    public void helper(String s, List<String> step, List<List<String>> result) {
+    public void backtrack(List<List<String>> ans, List<String> templist, String s, int start){
         // Base case
-        if(s == null || s.length() == 0) {
-            result.add(new ArrayList<>(step));
-            return;
+        if(start==s.length()){
+            ans.add(new ArrayList<>(templist));
         }
-        for(int i = 1; i <= s.length(); i++) {
-            String temp = s.substring(0, i);
-            if(!isPalindrome(temp)) continue; // only do backtracking when current string is palindrome
-            
-            step.add(temp);  // choose
-            helper(s.substring(i, s.length()), step, result); // explore
-            step.remove(step.size() - 1); // unchoose
+        for(int i=start ; i<s.length() ; i++){
+         // only do backtracking when current string is palindrome
+          if(ispalindrome(s,start,i)){
+// if the substring of s is palindrome, we add it into the step, which means we choose this       substring. 
+              templist.add(s.substring(start,i+1));
+//we want to do the same thing to the remaining substring.So we recursively call our function.
+              backtrack(ans,templist,s,i+1);
+// remove the chosen substring, in order to try other options.
+              templist.remove(templist.size()-1);
+            }
         }
-        return;
     }
-    public boolean isPalindrome(String s) {
-        int left = 0, right = s.length() - 1;
-        while(left <= right) {
-            if(s.charAt(left) != s.charAt(right))
-                return false;
-            left ++;
-            right --;
-        }
-        return true;
+    public boolean ispalindrome(String s ,int low , int high){
+        while(low<high){
+            if(s.charAt(low++)!=s.charAt(high--)) return false;
+        } 
+         return true;
     }
 }
