@@ -22,7 +22,7 @@ class Solution {
     public String postorder(TreeNode node, Map<String,Integer> count , List<TreeNode> res){
         if(node==null) return "";
        
-        String representation = node.val+","+postorder(node.left,count,res)+","+postorder(node.right,count,res);
+        String representation = postorder(node.left,count,res)+","+postorder(node.right,count,res)+","+node.val;
        
         count.put(representation,count.getOrDefault(representation,0)+1);
        
