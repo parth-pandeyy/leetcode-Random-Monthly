@@ -15,50 +15,26 @@
  */
 class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
-    //     ArrayList<Integer> preorder = new ArrayList<Integer>();
-    //     TreeNode cur = root;
-    //     while(cur!=null){
-    //         if(cur.left==null){
-    //             preorder.add(cur.val);
-    //             cur=cur.right;
-    //         }
-    //         else{
-    //             TreeNode prev = cur.left;
-    //             while(prev.right!=null && prev.right!=cur){
-    //                 prev=prev.right;
-    //             }
-    //             if(prev.right==null){
-    //                 prev.right=cur;
-    //                 preorder.add(cur.val);
-    //                 cur=cur.left;
-    //             }
-    //             else{
-    //                 cur.right=null;
-    //                 cur=cur.right;
-    //             }
-    //         }
-    //     }
-    //     return preorder;
-    // }
-        ArrayList<Integer> preorder = new ArrayList<> ();
+        ArrayList<Integer> preorder = new ArrayList<Integer>();
         TreeNode cur = root;
-        while (cur != null) {
-            if (cur.left == null) {
+        while(cur!=null){
+            if(cur.left==null){
                 preorder.add(cur.val);
-                cur = cur.right;
-            } else {
+                cur=cur.right;
+            }
+            else{
                 TreeNode prev = cur.left;
-                while (prev.right != null && prev.right != cur) {
-                    prev = prev.right;
+                while(prev.right!=null && prev.right!=cur){
+                    prev=prev.right;
                 }
-
-                if (prev.right == null) {
-                    prev.right = cur;
+                if(prev.right==null){
+                    prev.right=cur;
                     preorder.add(cur.val);
-                    cur = cur.left;
-                } else {
-                    prev.right = null;
-                    cur = cur.right;
+                    cur=cur.left;
+                }
+                else{
+                    prev.right=null;
+                    cur=cur.right;
                 }
             }
         }
