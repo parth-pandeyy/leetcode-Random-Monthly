@@ -13,25 +13,26 @@
  *     }
  * }
  */
-// class Solution {
-//     int count=0;
-//     int ans;
-//     public int kthSmallest(TreeNode root, int k) {
-//         inorder(root,k);
-//         return ans;
-//     }
-//     public void inorder(TreeNode root, int k){
-//         if(root==null) return;
-//         inorder(root.left,k);
-//         if(++count==k){
-//             ans=root.val;
-//             return;
-//         }
-//         inorder(root.right,k);
-//     }
-// }
 
+class Solution {
+    int count=0;
+    int ans;
+    public int kthSmallest(TreeNode root, int k) {
+        inorder(root,k);
+        return ans;
+    }
+    public void inorder(TreeNode root, int k){
+        if(root==null) return;
+        inorder(root.left,k);
+        if(++count==k){
+            ans=root.val;
+            return;
+        }
+        inorder(root.right,k);
+    }
+}
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 class Solution{
     public int kthSmallest(TreeNode root, int k){
