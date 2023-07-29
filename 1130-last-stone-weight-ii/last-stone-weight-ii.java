@@ -19,12 +19,19 @@ class Solution {
                 }
             }
         }
-        for(int j=sum/2 ; j>=0 ; j--){
-            if(t[n][j]){
-                ans=j;
-                break;
-            }
-        }
-        return sum-2*ans;
+        // for(int j=sum/2 ; j>=0 ; j--){
+        //     if(t[n][j]){
+        //         ans=j;
+        //         break;
+        //     }
+        // }
+        // return sum-2*ans;
+
+        for(int j=0 ; j<=sum/2 ; j++){
+	        if(t[n][j]){
+	            ans = Math.min(ans,Math.abs(sum-2*j));
+	        }
+	    }
+	    return ans;
     }
 }
