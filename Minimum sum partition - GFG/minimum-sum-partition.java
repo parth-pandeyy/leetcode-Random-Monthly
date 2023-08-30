@@ -31,9 +31,8 @@ class Solution
 	public int minDifference(int arr[], int n) 
 	{ 
 	    // Your code goes here
-	    int sum = 0 ;
+	    int sum=0;
 	    for(int i=0 ; i<n ; i++) sum+=arr[i];
-	    
 	    
 	    boolean[][] t = new boolean[n+1][sum/2+1];
 	    isSubsetSum(arr,n,sum/2,t);
@@ -42,17 +41,15 @@ class Solution
 	    
 	    for(int j=0 ; j<=sum/2 ; j++){
 	        if(t[n][j]){
-	            ans = Math.min(ans,Math.abs(sum-2*j));
+	            ans=Math.min(ans,Math.abs(sum-2*j));
 	        }
 	    }
 	    return ans;
 	} 
 	
-	
 	public boolean isSubsetSum(int[] arr, int n, int sum, boolean[][] t){
 	    
-	    
-	    for(int i=0 ; i<sum+1 ; i++) t[0][i]=false;
+	    for(int i=0 ; i<sum+1; i++) t[0][i]=false;
 	    for(int j=0 ; j<n+1 ; j++) t[j][0]=true;
 	    
 	    for(int i=1 ; i<n+1 ; i++){
