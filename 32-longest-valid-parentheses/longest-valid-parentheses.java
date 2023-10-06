@@ -2,7 +2,7 @@ class Solution {
     public int longestValidParentheses(String s) {
         if(s == null || s.length() == 0) return 0;
 
-        Deque<Integer> stack = new ArrayDeque<>();
+        Stack<Integer> stack = new Stack<>();
 
         int res = 0;
 
@@ -14,7 +14,7 @@ class Solution {
             else{
                 stack.pop();
 
-                if(stack.isEmpty()){
+                if(stack.empty()){
                     stack.push(i);
                 }
                 
