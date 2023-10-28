@@ -49,22 +49,6 @@ class Solution {
     }
 
     //concat string a to b. For example, "bake" and "kelt" =>"bakelt" 
-    // private String overlapShortestString(String a, String b){
-    //     for(int i= Math.max(1,a.length()-b.length()) ; i<a.length() ; i++){
-    //         boolean match = true;
-    //         for(int j=i ; j<a.length() ; j++){
-    //             if(a.charAt(j) != b.charAt(j-i)){
-    //                 match = false;
-    //                 break;
-    //             }
-    //         }
-    //         if(match){
-    //             return a.substring(0,i) + b;
-    //         }
-    //     }
-    //     return a + b;
-    // }
-
     private String overlapShortestString(String a, String b) {
     int maxOverlap = 0;
     for (int i = 1; i <= Math.min(a.length(), b.length()); i++) {
@@ -75,7 +59,5 @@ class Solution {
         }
     }
     return a + b.substring(maxOverlap);
-}
-
-
+    }
 }
