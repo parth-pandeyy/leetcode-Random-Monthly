@@ -14,13 +14,7 @@ class Solution {
 
             if(t==1) return -1;
 
-            count+=t/3;
-            if(t%3!=0) count++;
-
-            // //count += Math.ceil(t/3);
-            // count += Math.floor(t / 3);
-            
-            // if (t % 3 !== 0) count++;
+            count += Math.ceil((double) t / 3);
         }
         return count;
     }
